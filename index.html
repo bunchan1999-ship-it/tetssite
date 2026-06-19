@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <title>テストホームページ</title>
+    <style>
+        body {
+            font-family: 'Helvetica Neue', Arial, 'Hiragino Kaku Gothic ProN', 'Hiragino Sans', Meiryo, sans-serif;
+            text-align: center;
+            background-color: #f7f9fa;
+            padding: 40px 20px;
+            margin: 0;
+        }
+        
+        /* タイトルのデザイン */
+        h1 {
+            color: #1a1a1a;
+            font-size: 28px;
+            font-weight: 800;
+            margin-bottom: 5px;
+            letter-spacing: 0.05em;
+        }
+        
+        .subtitle {
+            color: #666666;
+            font-size: 16px;
+            margin-bottom: 30px;
+        }
+
+        /* 💡 お知らせ看板（案内文）のデザイン */
+        .info-card {
+            max-width: 500px;
+            margin: 0 auto;
+            background: #ffffff;
+            padding: 30px 20px;
+            border-radius: 16px;
+            box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+            border-top: 8px solid #ff3b30; /* 上部にアクセントカラーの赤線 */
+            text-align: left; /* 文字の頭を揃えて読みやすく */
+        }
+
+        /* 各行のまとまり */
+        .info-row {
+            display: flex;
+            margin-bottom: 20px;
+            line-height: 1.5;
+        }
+        .info-row:last-child {
+            margin-bottom: 0;
+        }
+
+        /* 「日程」などの見出し（ラベル） */
+        .label {
+            font-weight: 800;
+            color: #ff3b30; /* 目立つ赤色 */
+            font-size: 18px;
+            width: 4.5em; /* 幅を揃えて綺麗に整列 */
+            flex-shrink: 0;
+            position: relative;
+        }
+
+        /* 右側の具体的な中身の文字 */
+        .content {
+            font-weight: 700;
+            color: #2c3e50;
+            font-size: 20px; /* 文字を大きくして目立たせる */
+        }
+        
+        /* 弁士の名前を目立たせる強調 */
+        .highlight-name {
+            background: linear-gradient(transparent 60%, #fff3b3 60%); /* 黄色のマーカー線 */
+            padding: 0 2px;
+        }
+    </style>
+</head>
+<body>
+
+    <h1>テストホームページ</h1>
+    <p class="subtitle">ネット上に無料で公開するテスト中です！</p>
+
+    <!-- 💡 追加した情報エリア -->
+    <div class="info-card">
+        <div class="info-row">
+            <span class="label">日程</span>
+            <span class="content">７月４日</span>
+        </div>
+        <div class="info-row">
+            <span class="label">場所</span>
+            <span class="content">四条烏丸北西角</span>
+        </div>
+        <div class="info-row">
+            <span class="label">弁士</span>
+            <span class="content">
+                <span class="highlight-name">田中さん</span>、
+                <span class="highlight-name">山田さん</span>、
+                <span class="highlight-name">佐藤さん</span>
+            </span>
+        </div>
+    </div>
+
+</body>
+</html>
