@@ -36,7 +36,7 @@
             margin: 0 auto;
         }
 
-        /* ✨ 変更：タイトルの下のメッセージスタイル（より大きく、目を引くデザインへ） */
+        /* ✨ タイトルの下のメッセージスタイル */
         .sub-message {
             font-size: 24px;          /* 22px〜24pxにサイズアップして存在感を強化 */
             font-weight: 700;         /* しっかりとした太字に変更 */
@@ -45,8 +45,25 @@
             line-height: 1.6;         /* 大きめの文字に適した行間 */
             text-align: center;       /* 中央揃え */
             margin-top: 25px;         /* 画像との間の余白 */
-            margin-bottom: 40px;      /* 下のカードとの間の余白 */
+            margin-bottom: 25px;      /* 💡 下の追加画像との間の余白を調整 */
             padding: 0 15px;          /* スマホ等での端の詰まり防止 */
+        }
+
+        /* ✨ 追加：新しく挿入する画像（senden1.png）のボックス設定 */
+        .senden-image-box {
+            text-align: center;
+            margin-bottom: 40px;      /* 下の日時カードとの間の余白 */
+            padding: 0 10px;
+        }
+
+        /* ✨ 追加：画像がはみ出さないようにし、少し角を丸くして柔らかい印象に */
+        .senden-image-box img {
+            max-width: 100%;
+            height: auto;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.03); /* ほんの少しだけ影をつけて綺麗に見せます */
+            display: block;
+            margin: 0 auto;
         }
 
         /* 開催概要カード（見やすさを追求） */
@@ -158,8 +175,9 @@
         @media (max-width: 600px) {
             .container { margin: 10px auto; padding: 10px; }
             .main-title-box { margin-bottom: 20px; }
-            /* ✨ スマホでの見え方も大きく調整 */
-            .sub-message { font-size: 19px; margin-bottom: 30px; letter-spacing: 0.05em; }
+            .sub-message { font-size: 19px; margin-bottom: 20px; letter-spacing: 0.05em; }
+            /* ✨ スマホの時は画像の下の余白を少し縮めます */
+            .senden-image-box { margin-bottom: 25px; }
             .info-card { padding: 25px 20px; }
             .info-list li { font-size: 16px; }
             .section-box { padding: 20px; }
@@ -171,17 +189,18 @@
 
     <div class="container">
 
-        <!-- 💡 1. メインタイトル（文字から画像へ置き換え） -->
         <div class="main-title-box">
             <img src="title01.png" alt="大学教職員もスタンディング（アピール）します！！">
         </div>
 
-        <!-- ✨ タイトルの下のメッセージ -->
         <div class="sub-message">
             民主主義と平和、憲法、暮らし、そして大学のことなど、伝えたいと思います。
         </div>
 
-        <!-- 2. 日時・場所・注意点のカード -->
+        <div class="senden-image-box">
+            <img src="senden1.png" alt="アピール画像">
+        </div>
+
         <div class="info-card">
             <ul class="info-list">
                 <li>2026年７月６日（月）18時～18時40分</li>
@@ -191,12 +210,10 @@
             </ul>
         </div>
 
-        <!-- 3. 地図画像（map01.jpg）エリア -->
         <div class="map-box">
             <img src="map01.jpg" alt="四条烏丸交差点・南西側の地図案内">
         </div>
 
-        <!-- 4. 呼びかけ人セクション -->
         <div class="section-box">
             <h2>呼びかけ人（アイウエオ順）</h2>
             <div class="names-list">
@@ -204,7 +221,6 @@
             </div>
         </div>
 
-        <!-- 5. 連絡先ボックス -->
         <div class="contact-box">
             連絡先：細川孝（<a href="mailto:hosokawa@biz.ryukoku.ac.jp">hosokawa@biz.ryukoku.ac.jp</a>）
         </div>
