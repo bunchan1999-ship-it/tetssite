@@ -45,18 +45,18 @@
             line-height: 1.6;         /* 大きめの文字に適した行間 */
             text-align: center;       /* 中央揃え */
             margin-top: 25px;         /* 画像との間の余白 */
-            margin-bottom: 25px;      /* 💡 下の追加画像との間の余白を調整 */
+            margin-bottom: 25px;      /* 下の追加画像との間の余白を調整 */
             padding: 0 15px;          /* スマホ等での端の詰まり防止 */
         }
 
-        /* ✨ 追加：新しく挿入する画像（senden1.png）のボックス設定 */
+        /* 新しく挿入する画像（senden1.png）のボックス設定 */
         .senden-image-box {
             text-align: center;
             margin-bottom: 40px;      /* 下の日時カードとの間の余白 */
             padding: 0 10px;
         }
 
-        /* ✨ 追加：画像がはみ出さないようにし、少し角を丸くして柔らかい印象に */
+        /* 画像がはみ出さないようにし、少し角を丸くして柔らかい印象に */
         .senden-image-box img {
             max-width: 100%;
             height: auto;
@@ -157,6 +157,7 @@
             border-radius: 12px;
             font-size: 16px;
             font-weight: 700;
+            margin-bottom: 30px; /* 💡 ボタンとの間に余白を作るために追加 */
         }
 
         .contact-box a {
@@ -171,17 +172,68 @@
             border-bottom-style: solid;
         }
 
+        /* ✨ 追加：SNSシェアボタン全体の枠組み */
+        .share-container {
+            text-align: center;
+            margin-top: 40px;
+            margin-bottom: 20px;
+        }
+
+        .share-title {
+            font-size: 15px;
+            color: #7f8c8d;
+            font-weight: 700;
+            margin-bottom: 15px;
+            letter-spacing: 0.05em;
+        }
+
+        .share-buttons {
+            display: flex;
+            justify-content: center;
+            gap: 12px; /* ボタン同士の間隔 */
+            flex-wrap: wrap; /* スマホで入り切らない場合に折り返す */
+        }
+
+        /* ✨ 追加：各シェアボタンの共通スタイル */
+        .share-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            padding: 10px 24px;
+            font-size: 15px;
+            font-weight: 700;
+            color: #ffffff;
+            text-decoration: none;
+            border-radius: 30px; /* 丸みのある可愛いボタン */
+            transition: all 0.2s ease;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.05);
+            min-width: 110px;
+        }
+
+        .share-btn:hover {
+            transform: translateY(-2px); /* ホバー時に少し浮き上がらせる */
+            box-shadow: 0 6px 15px rgba(0, 0, 0, 0.1);
+            opacity: 0.9;
+        }
+
+        /* 各SNSの少し落ち着かせたブランドカラー設定 */
+        .btn-x { background-color: #111111; }         /* X（旧Twitter） */
+        .btn-fb { background-color: #3b5998; }        /* Facebook */
+        .btn-line { background-color: #06b712; }      /* LINE */
+
         /* スマートフォン画面への対応（レスポンシブ対応） */
         @media (max-width: 600px) {
             .container { margin: 10px auto; padding: 10px; }
             .main-title-box { margin-bottom: 20px; }
             .sub-message { font-size: 19px; margin-bottom: 20px; letter-spacing: 0.05em; }
-            /* ✨ スマホの時は画像の下の余白を少し縮めます */
             .senden-image-box { margin-bottom: 25px; }
             .info-card { padding: 25px 20px; }
             .info-list li { font-size: 16px; }
             .section-box { padding: 20px; }
             .map-box { padding: 10px; }
+            /* ✨ スマホの時はボタンの横幅を少し広げて押しやすく */
+            .share-btn { padding: 12px 20px; flex: 1; min-width: 90px; font-size: 14px; }
+            .share-buttons { padding: 0 10px; }
         }
     </style>
 </head>
@@ -223,6 +275,21 @@
 
         <div class="contact-box">
             連絡先：細川孝（<a href="mailto:hosokawa@biz.ryukoku.ac.jp">hosokawa@biz.ryukoku.ac.jp</a>）
+        </div>
+
+        <div class="share-container">
+            <div class="share-title">このページをシェアして拡散する</div>
+            <div class="share-buttons">
+                <a href="https://twitter.com/share?url=https://bunchan1999-ship-it.github.io/tetssite/&text=大学教職員もスタンディング（アピール）します！！" target="_blank" rel="noopener noreferrer" class="share-btn btn-x">
+                    Xでシェア
+                </a>
+                <a href="https://www.facebook.com/sharer/sharer.php?u=https://bunchan1999-ship-it.github.io/tetssite/" target="_blank" rel="noopener noreferrer" class="share-btn btn-fb">
+                    Facebook
+                </a>
+                <a href="https://social-plugins.line.me/lineit/share?url=https://bunchan1999-ship-it.github.io/tetssite/" target="_blank" rel="noopener noreferrer" class="share-btn btn-line">
+                    LINEで送る
+                </a>
+            </div>
         </div>
 
     </div>
