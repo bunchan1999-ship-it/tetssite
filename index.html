@@ -36,6 +36,19 @@
             margin: 0 auto;
         }
 
+        /* ✨ 変更：タイトルの下のメッセージスタイル（より大きく、目を引くデザインへ） */
+        .sub-message {
+            font-size: 24px;          /* 22px〜24pxにサイズアップして存在感を強化 */
+            font-weight: 700;         /* しっかりとした太字に変更 */
+            color: #2c3e50;           /* 開催概要カードと統一感のある、知的で洗練されたディープネイビー */
+            letter-spacing: 0.08em;   /* 文字間隔をさらに広げ、パッと見やすくて美しい余白に */
+            line-height: 1.6;         /* 大きめの文字に適した行間 */
+            text-align: center;       /* 中央揃え */
+            margin-top: 25px;         /* 画像との間の余白 */
+            margin-bottom: 40px;      /* 下のカードとの間の余白 */
+            padding: 0 15px;          /* スマホ等での端の詰まり防止 */
+        }
+
         /* 開催概要カード（見やすさを追求） */
         .info-card {
             background: #ffffff;
@@ -145,6 +158,8 @@
         @media (max-width: 600px) {
             .container { margin: 10px auto; padding: 10px; }
             .main-title-box { margin-bottom: 20px; }
+            /* ✨ スマホでの見え方も大きく調整 */
+            .sub-message { font-size: 19px; margin-bottom: 30px; letter-spacing: 0.05em; }
             .info-card { padding: 25px 20px; }
             .info-list li { font-size: 16px; }
             .section-box { padding: 20px; }
@@ -159,6 +174,11 @@
         <!-- 💡 1. メインタイトル（文字から画像へ置き換え） -->
         <div class="main-title-box">
             <img src="title01.png" alt="大学教職員もスタンディング（アピール）します！！">
+        </div>
+
+        <!-- ✨ タイトルの下のメッセージ -->
+        <div class="sub-message">
+            民主主義と平和、憲法、暮らし、そして大学のことなど、伝えたいと思います。
         </div>
 
         <!-- 2. 日時・場所・注意点のカード -->
